@@ -24,7 +24,6 @@ However, the application has been bought out by "TPE.FYI LLC" in late 2022[^1] t
 
 > •WHEREAS, NightOwl app enables Users to share internet traffic by modifying their device's network settings to be used as a gateway for internet traffic. Additionally, the User's device acts as a gateway for NightOwl app's Clients, including companies that specialize in web and market research, SEO, brand protection, content delivery, cybersecurity, etc.
 
-We have contacted NightOwl regarding this, and haven't recieved a response yet.
 
 [^1]: <https://www.kramser.xyz/>
 [^2]: <https://nightowlapp.co/imprint>
@@ -81,16 +80,6 @@ The application also seems to use the [Pawns](https://pawns.app/) SDK[^3], which
 [^5]: <https://pawns.app/>
 [^6]: <https://pawns.app/blog/iproyal-pawns-is-now-pawns-app/>
 [^7]: <https://iproyal.com/>
-
-## But just who is "TPE.FYI LLC"?
-
-TPE (or Keeping Tempo, or Tempo AI (not to be confused with the Tempo AI calendar or the Tempo AI gym)) is "in the process of building a pricing model based on various  analytics such as YouTube video views for an artist and geographical  popularity data that will allow venues to price their tickets based on  actual demand for an artist."[^8] Information is sparse, and little information past 2018 exists. The application, at least the time of writing, and the installations I've been made aware of, makes a lot of connections to https://stubbs.frontgatetickets.com/, a website that sells tickets to live music events for a restaurant in Austin, TX.
-
-The company was incorporated in September 2018 in Austin, Texas, and was dissolved in March 2023 by a "Jarod Stirling"[^9].
-
-[^8]: <https://www.f6s.com/keepingtempo>
-[^9]: <https://opencorporates.com/companies/us_tx/0803112154>
-
 
 ## Questions, concerns, comments?
 
