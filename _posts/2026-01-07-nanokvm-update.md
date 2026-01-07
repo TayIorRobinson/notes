@@ -25,13 +25,16 @@ the first place.
 
 1. Get https://cdn.sipeed.com/nanokvm/latest.json. Copy the `name` field, put the name field on the end of `https://cdn.sipeed.com/nanokvm/`, and download that file.
      <!-- hope they don't try and XSS me -->
-     i. Alternatively, just click this <div id="sipeed_update_fetch"><button onclick="fetch('https://cdn.sipeed.com/nanokvm/latest.json').then(r => r.json()).then(({name, sha512}) => document.getElementById('sipeed_update_fetch').innerHTML = `<a href='https://cdn.sipeed.com/nanokvm/${name}'>${name}</a> (SHA512: <kbd>${sha512}</kbd>)`).catch(e => alert('Sorry, error! ' + e))">Do it for me</button> </div>
-2. Optional: Validate the SHA512 sum.
+     i. Alternatively, just click this
+
+   <div id="sipeed_update_fetch"><button onclick="fetch('https://cdn.sipeed.com/nanokvm/latest.json').then(r => r.json()).then(({name, sha512}) => document.getElementById('sipeed_update_fetch').innerHTML = `<a href='https://cdn.sipeed.com/nanokvm/${name}'>${name}</a> (SHA512: <kbd>${sha512}</kbd>)`).catch(e => alert('Sorry, error! ' + e))">Do it for me</button> </div>
+
+3. Optional: Validate the SHA512 sum.
     i. **\*nixes:** `openssl sha512 -binary -- nanokvm_2.3.1.tar.gz | base64`
    ii. **PowerShell:** `[System.Convert]::ToBase64String(@(((Get-FileHash -Algorithm SHA512 | Select -ExpandProperty hash)  -split '([A-F0-9]{2})') | foreach-object { if ($_) {[System.Convert]::ToByte($_,16)}}))` (enter path when it asks, just hit enter second time)
-3. Copy the file to your NanoKVM with `scp Downloads/nanokvm_2.3.1.tar.gz root@NANOKVM_IP:/tmp/update.tar.gz` (default root password is `root`)
-4. Log in via SSH as root
-5. Run the following:
+4. Copy the file to your NanoKVM with `scp Downloads/nanokvm_2.3.1.tar.gz root@NANOKVM_IP:/tmp/update.tar.gz` (default root password is `root`)
+5. Log in via SSH as root
+6. Run the following:
     1. `rm -rf /root/old/` (don't worry if this fails)
     2. `mkdir -p /root/.kvmcache; cd /root/.kvmcache` (make temporary directory)
     3. `gunzip -c /tmp/update.tar.gz | tar xv` (unpack archive)
